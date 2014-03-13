@@ -1,29 +1,31 @@
 <!doctype html>
-<html lang="en" ng-app="myApp">
-<head>
-  <meta charset="utf-8">
-  <title>My AngularJS App</title>
-  <link rel="stylesheet" href="css/app.css"/>
-</head>
-<body>
-  <ul class="menu">
-    <li><a href="#/view1">view1</a></li>
-    <li><a href="#/view2">view2</a></li>
-  </ul>
+<html lang="en" ng-app="weatherApp">
+    <head>
+        <meta charset="utf-8">
+        <title>Weather Application</title>
+        <link rel="stylesheet" href="css/app.css"/>
+        <link rel="stylesheet" href="css/bootstrap/bootstrap.css"/>
+        <link rel="stylesheet" href="css/bootstrap/bootstrap-theme.css"/>
+        <link rel="stylesheet" href="css/kendo/kendo.common-bootstrap.min.css"/>
+    </head>
+    <body>
+        <nav class="navbar navbar-inverse navbar-static-top">
+            <a href="#/" class="navbar-brand span2">Weather Application</a>
+            <a href="#/AddNewLocation" class="btn navbar-btn btn-primary">Add new location</a>
+        </nav>
+        <div ng-view></div>
 
-  <div ng-view></div>
+        <!--LIBS-->
+        <script src="lib/angular/angular.js"></script>
+        <script src="lib/angular/angular-route.js"></script>
+        <script src="lib/kendo/jquery.min.js"></script>
+        <script src="lib/kendo/kendo.all.min.js"></script>
+        <script src="lib/angular-kendo.js"></script>
+        <script src="lib/bootstrap/bootstrap.js"></script>
 
-  <div>Angular seed app: v<span app-version></span></div>
-
-  <!-- In production use:
-  <script src="//ajax.googleapis.com/ajax/libs/angularjs/x.x.x/angular.min.js"></script>
-  -->
-  <script src="lib/angular/angular.js"></script>
-  <script src="lib/angular/angular-route.js"></script>
-  <script src="js/app.js"></script>
-  <script src="js/services.js"></script>
-  <script src="js/controllers.js"></script>
-  <script src="js/filters.js"></script>
-  <script src="js/directives.js"></script>
-</body>
+        <script src="js/app.js"></script>
+        <script src="js/services/WeatherSvc.js"></script>
+        <script src="js/controllers/WeatherListCtrl.js"></script>
+        <script src="js/controllers/WeatherDetailCtrl.js"></script>
+    </body>
 </html>

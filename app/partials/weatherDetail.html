@@ -1,0 +1,15 @@
+<div class="container">
+    <h1 class="page-header">{{ title }}</h1>
+    <form name="weatherDetailForm">
+        <fieldset>
+            <label for="weatherCountry">Country:</label>
+            <input id="weatherCountry" type="text" required ng-model="weather.country" focus />
+        </fieldset>
+
+        <br />
+        <br />
+
+        <button type="submit" class="btn btn-primary" ng-click="addWeather(weather, weatherDetailForm)">Add</button>
+        <button type="button" class="btn btn-default" ng-click="cancelAdd()">Cancel</button>
+    </form>
+</div>
