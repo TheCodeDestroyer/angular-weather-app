@@ -1,7 +1,8 @@
 <div class="container" xmlns="http://www.w3.org/1999/html">
     <h1 class="page-header">{{ title }}</h1>
 
-    <div class="thumbnail col-sm-6 col-md-2" kendo ng-repeat="obj in weatherDataList">
+    <div class="thumbnail col-sm-6 col-md-2" ng-repeat="obj in weatherDataList">
+        <!--<div kendo-list-view k-data-source="weatherDataList" k-template="template">-->
         <img ng-src="http://openWeatherMap.org/img/w/{{ obj.weather[0].icon}}.png"
              style="width: 100px; height: 100px;" />
 
@@ -13,4 +14,19 @@
             Temperature: {{ obj.main.temp }}
         </div>
     </div>
+
+
+    <!--<script id="template" type="text/x-kendo-template">-->
+    <!--&lt;!&ndash;<img src="http://openWeatherMap.org/img/w/#= obj.weather[0].icon#.png"&ndash;&gt;-->
+    <!--&lt;!&ndash;style="width: 100px; height: 100px;" />&ndash;&gt;-->
+
+    <!--<div class="caption">-->
+    <!--Country: #: obj.sys.country #-->
+    <!--</br>-->
+    <!--Description: #: obj.weather[0].description #-->
+    <!--</br>-->
+    <!--Temperature: #: obj.main.temp #-->
+    <!--</div>-->
+    <!--</script>-->
+
 </div>
