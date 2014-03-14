@@ -5,7 +5,8 @@
 angular.module('weatherApp', [
     'ngRoute',
     'weatherApp.services',
-    'weatherApp.controllers'
+    'weatherApp.controllers',
+    'kendo.directives'
 ]);
 
 angular.module('weatherApp.controllers', []);

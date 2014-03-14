@@ -1,8 +1,16 @@
-<div class="container">
-
+<div class="container" xmlns="http://www.w3.org/1999/html">
     <h1 class="page-header">{{ title }}</h1>
-    <!--<ul class="list-group">-->
-    <!--&lt;!&ndash;<li ng-repeat="weat in weather" class="list-group-item"></li>&ndash;&gt;-->
-    <!--<li>{{ weather }}</li>-->
-    <!--</ul>-->
+
+    <div class="thumbnail col-sm-6 col-md-2" kendo ng-repeat="obj in weatherDataList">
+        <img ng-src="http://openWeatherMap.org/img/w/{{ obj.weather[0].icon}}.png"
+             style="width: 100px; height: 100px;" />
+
+        <div class="caption">
+            Country: {{ obj.sys.country }}
+            </br>
+            Description: {{ obj.weather[0].description }}
+            </br>
+            Temperature: {{ obj.main.temp }}
+        </div>
+    </div>
 </div>

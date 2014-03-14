@@ -5,7 +5,11 @@
 angular.module('weatherApp.controllers').
   controller('WeatherListCtrl', ['$scope', 'weatherService', function($scope, weatherService) {
         $scope.title = 'Your favorite weather reports';
+        $scope.weatherDataList = [];
 
-        var weatherList = weatherService.getWeatherList();
-        $scope.weatherDataList = weatherList;
+        weatherService.getWeatherList().then(function (data) {
+            $scope.weatherDataList = data;
+        }, function (error) {
+
+        });
     }]);
